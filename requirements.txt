@@ -1,0 +1,25 @@
+# Data Processing
+pandas
+numpy
+scikit-learn
+
+# ML & Experimentation
+mlflow
+xgboost
+imbalanced-learn
+
+# Visualization
+matplotlib
+seaborn
+plotly
+
+# Development
+jupyter
+pytest
+black
+pylint
+pre-commit
+
+# Config
+pyyaml
+python-dotenv
