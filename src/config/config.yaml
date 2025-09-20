@@ -1,0 +1,33 @@
+mlflow:
+  tracking_uri: "sqlite:///mlruns.db"
+  experiment_name: "predictive_maintenance"
+  registry_uri: "sqlite:///mlruns.db"
+  
+model:
+  random_state: 42
+  test_size: 0.2
+  cv_folds: 5
+  
+  # Baseline model parameters
+  baseline:
+    n_estimators: 100
+    max_depth: 5
+    learning_rate: 0.1
+    
+features:
+  numerical:
+    - "Air temperature [K]"
+    - "Process temperature [K]"
+    - "Rotational speed [rpm]"
+    - "Torque [Nm]"
+    - "Tool wear [min]"
+  
+  engineered:
+    - "Temperature Difference [K]"
+    - "Power [W]"
+    - "Tool Wear Rate"
+  
+  categorical:
+    - "Type"
+    
+target: "Target"
