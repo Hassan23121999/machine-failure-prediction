@@ -30,3 +30,7 @@ uvicorn
 python-multipart
 pydantic
 httpx
+
+# Frontend
+streamlit
+plotly
