@@ -48,7 +48,11 @@ class DataProcessor:
         )
         
         # Tool wear rate (wear per unit produced)
-        df['Tool Wear Rate'] = df['Tool wear [min]'] / (df['UDI'] + 1)
+        # Use UDI if available, otherwise use a default value
+        if 'UDI' in df.columns:
+            df['Tool Wear Rate'] = df['Tool wear [min]'] / (df['UDI'] + 1)
+        else:
+            df['Tool Wear Rate'] = df['Tool wear [min]'] / 100  # Default normalization
         
         # Tool wear categories
         df['Tool Wear Category'] = pd.cut(

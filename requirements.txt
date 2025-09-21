@@ -23,3 +23,10 @@ pre-commit
 # Config
 pyyaml
 python-dotenv
+
+# API Dependencies
+fastapi
+uvicorn
+python-multipart
+pydantic
+httpx
